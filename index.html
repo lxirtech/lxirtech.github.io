@@ -1,34 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <meta name="name" content="LXIR Technology">
-        <meta name="robots" content="noindex, nofollow">
-        <title>LXIR Technology</title>
-        <link rel="stylesheet" href="css/master.css">
-        <link rel="shortcut" href="favicon.ico" type="image/x-icon">
-        <link rel="FaviconIcon" href="favicon.ico" type="image/x-icon">
-    </head>
-    <body>
-        <img src="/LXIR TECHNOLOGY-logos_black.png" width="25%" alt="banner">
-        <h1>LXIR Technology</h1>
-        <h2>About Us</h2>
-        <p>Digital Content Creation: Extended Reality and Digital Twin Solutions.</p>
-        <P>LXIR Technology provides digital media solutions to transform projects into digital projects and create meaningful twins.</P>
-        <p>Since 2023, digital worlds being created by LXIR Technology.</p>
-        <h2>Solutions</h2>
-        <p>Extended Reality Compatible BIM Models</p>
-        <p>360 Degree Video Tours</p>
-        <p>Realistic Renders for Construction Projects</p>
-        <h2>About Founder</h2>
-            <p><a href="docs/donmezg_231220_en.pdf">My Resume</a> | <a href="https://github.com/Horuspokus">My GitHub</a> | <a href="https://www.linkedin.com/in/donmezgokhan/">My LinkedIn</a></p>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:info@lxir.tech">info@lxir.tech</a></p>
-    </body>
-    <footer>
-        <hr>
-        <code>Copyright (c) 2022-2024 Gökhan Dönmez</code>
-    </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="name" content="LXIR Technology">
+  <meta name="robots" content="noindex, nofollow">
+  <title>LXIR Technology</title>
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">LXIR Technology</div>
+    <nav class="nav">
+      <a href="#about-us">About Us</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#founder">About Founder</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about-us" class="section">
+      <img src="/LXIR TECHNOLOGY-logos_black.png" alt="LXIR Technology Logo" class="banner">
+      <h1>About Us</h1>
+      <p>Digital Content Creation: Extended Reality and Digital Twin Solutions.</p>
+      <p>LXIR Technology provides digital media solutions to transform projects into digital projects and create meaningful twins.</p>
+      <p>Since 2023, digital worlds are being created by LXIR Technology.</p>
+    </section>
+
+    <section id="solutions" class="section">
+      <h1>Solutions</h1>
+      <ul class="solutions-list">
+        <li>Extended Reality Compatible BIM Models</li>
+        <li>360 Degree Video Tours</li>
+        <li>Realistic Renders for Construction Projects</li>
+      </ul>
+    </section>
+
+    <section id="founder" class="section">
+      <h1>About Founder</h1>
+      <p>
+        <a href="docs/donmezg_231220_en.pdf" target="_blank">My Resume</a> | 
+        <a href="https://github.com/Horuspokus" target="_blank">My GitHub</a> | 
+        <a href="https://www.linkedin.com/in/donmezgokhan/" target="_blank">My LinkedIn</a>
+      </p>
+    </section>
+
+    <section id="contact" class="section">
+      <h1>Contact</h1>
+      <p>Email: <a href="mailto:info@lxir.tech">info@lxir.tech</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <hr>
+    <p>&copy; 2022-2024 Gökhan Dönmez. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.createElement("button");
+    toggleButton.textContent = "Toggle Dark Mode";
+    toggleButton.style.position = "fixed";
+    toggleButton.style.bottom = "20px";
+    toggleButton.style.right = "20px";
+    toggleButton.style.padding = "10px 20px";
+    toggleButton.style.cursor = "pointer";
+    toggleButton.style.zIndex = 1000;
+    document.body.appendChild(toggleButton);
+
+    toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        document.querySelector(".header").classList.toggle("dark-mode");
+        document.querySelector(".footer").classList.toggle("dark-mode");
+        document.querySelectorAll(".solutions-list li").forEach(item => {
+            item.classList.toggle("dark-mode");
+        });
+    });
+});
+  </script>
+</body>
 </html>
