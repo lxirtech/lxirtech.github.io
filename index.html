@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +7,667 @@
         <meta name="name" content="LXIR Technology">
         <meta name="robots" content="noindex, nofollow">
         <title>LXIR Technology</title>
-        <link rel="stylesheet" href="css/master.css">
-        <link rel="shortcut" href="favicon.ico" type="image/x-icon">
-        <link rel="FaviconIcon" href="favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/master.css">
+        <link rel="shortcut" href="assets/images/favicon.ico" type="image/x-icon">
+        <link rel="FaviconIcon" href="assets/images/favicon.ico" type="image/x-icon">
     </head>
     <body>
-        <img src="/LXIR TECHNOLOGY-logos_black.png" width="25%" alt="banner">
-        <h1>LXIR Technology</h1>
-        <h2>About Us</h2>
-        <p>Digital Content Creation: Extended Reality and Digital Twin Solutions.</p>
-        <P>LXIR Technology provides digital media solutions to transform projects into digital projects and create meaningful twins.</P>
-        <p>Since 2023, digital worlds being created by LXIR Technology.</p>
-        <h2>Solutions</h2>
-        <p>Extended Reality Compatible BIM Models</p>
-        <p>360 Degree Video Tours</p>
-        <p>Realistic Renders for Construction Projects</p>
-        <h2>About Founder</h2>
-            <p><a href="docs/donmezg_231220_en.pdf">My Resume</a> | <a href="https://github.com/Horuspokus">My GitHub</a> | <a href="https://www.linkedin.com/in/donmezgokhan/">My LinkedIn</a></p>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:info@lxir.tech">info@lxir.tech</a></p>
+        <header class="hero" id="top">
+            <div class="hero__inner">
+                <div class="control-bar">
+                    <a class="control-bar__contact" href="mailto:info@lxir.tech">
+                        <span class="control-bar__contact-icon" aria-hidden="true">&#9993;</span>
+                        <span data-i18n="controls.contactEmail">info@lxir.tech</span>
+                    </a>
+                    <div class="control-bar__group control-bar__group--controls">
+                        <span class="control-bar__label" data-i18n="controls.languageLabel">Select language</span>
+                        <div class="language-switch" id="language-switch" role="group" aria-label="Select language">
+                            <button type="button" class="language-switch__btn is-active" data-lang="en">EN</button>
+                        </div>
+                        <div class="control-bar__divider" aria-hidden="true"></div>
+                        <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="true" aria-label="Switch to light theme">
+                            <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
+                            <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero__content">
+                    <img
+                        src="assets/images/lxir-logo-white.png"
+                        alt="LXIR Technology"
+                        class="hero__logo"
+                        data-logo-light="assets/images/lxir-logo-black.png"
+                        data-logo-dark="assets/images/lxir-logo-white.png"
+                    >
+                    <p class="hero__eyebrow" data-i18n="hero.eyebrow">Spatial Technology Company</p>
+                    <h1 data-i18n="hero.title">Products and pipelines for believable XR twins.</h1>
+                    <p class="hero__lead" data-i18n="hero.lead">LXIR Technology engineers the toolchains that make immersive content repeatable—from BIM ingestion to real-time delivery. We build custom software, optimize data, and produce experiences that scale.</p>
+                    <div class="hero__cta">
+                        <a class="btn btn--primary" href="#contact" data-i18n="hero.primaryCta">Schedule an introduction</a>
+                        <a class="btn btn--ghost" href="assets/docs/donmezg_231220_en.pdf" data-i18n="hero.secondaryCta">Download resume</a>
+                    </div>
+                </div>
+                <nav class="hero__nav">
+                    <a href="#about" data-i18n="hero.nav.about">About</a>
+                    <a href="#solutions" data-i18n="hero.nav.solutions">Solutions</a>
+                    <a href="#founder" data-i18n="hero.nav.founder">Founder</a>
+                    <a href="#contact" data-i18n="hero.nav.contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <nav class="dot-nav" aria-label="Section navigation">
+            <a href="#top" class="dot-nav__dot is-active" data-section="top">
+                <span>Top</span>
+            </a>
+            <a href="#about" class="dot-nav__dot" data-section="about">
+                <span>About</span>
+            </a>
+            <a href="#solutions" class="dot-nav__dot" data-section="solutions">
+                <span>Solutions</span>
+            </a>
+            <a href="#founder" class="dot-nav__dot" data-section="founder">
+                <span>Founder</span>
+            </a>
+            <a href="#contact" class="dot-nav__dot" data-section="contact">
+                <span>Contact</span>
+            </a>
+        </nav>
+        <main>
+            <section id="about" class="section section--highlight">
+                <div class="section__content">
+                    <h2 data-i18n="about.title">About Us</h2>
+                    <p data-i18n="about.body">Since 2023, LXIR Technology has been building proprietary frameworks that connect CAD/BIM sources to XR viewers, accelerating the path from raw data to believable twins. We blend software development with technical art to make immersive experiences reproducible.</p>
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="metric__value" data-i18n="about.metrics.xr.value">XR</span>
+                            <span class="metric__label" data-i18n="about.metrics.xr.label">interoperable from day one</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric__value" data-i18n="about.metrics.tours.value">360°</span>
+                            <span class="metric__label" data-i18n="about.metrics.tours.label">narrative tours</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric__value" data-i18n="about.metrics.realtime.value">Real-time</span>
+                            <span class="metric__label" data-i18n="about.metrics.realtime.label">design reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="solutions" class="section">
+                <div class="section__content">
+                    <div class="section__intro">
+                        <h2 data-i18n="solutions.title">Solutions</h2>
+                        <p data-i18n="solutions.intro">Our products cover pipeline automation, immersive storytelling platforms, and visualization systems that deliver measurable outcomes.</p>
+                    </div>
+                    <div class="card-grid">
+                        <article class="card">
+                            <h3 data-i18n="solutions.cards.0.title">XR-ready BIM Systems</h3>
+                            <p data-i18n="solutions.cards.0.body">Automation scripts and validators that convert BIM/CAD inputs into performant XR assets without sacrificing metadata fidelity.</p>
+                        </article>
+                        <article class="card">
+                            <h3 data-i18n="solutions.cards.1.title">360° Interaction Platforms</h3>
+                            <p data-i18n="solutions.cards.1.body">Custom tour engines with analytics, branching narratives, and CMS hooks so stakeholders experience every decision within context.</p>
+                        </article>
+                        <article class="card">
+                            <h3 data-i18n="solutions.cards.2.title">Photoreal Visualization Suite</h3>
+                            <p data-i18n="solutions.cards.2.body">Real-time render pipelines fed directly from the same source of truth, ensuring stills and motion match what ships in XR.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section id="founder" class="section section--alt">
+                <div class="section__content founder">
+                    <div>
+                        <h2 data-i18n="founder.title">About the Founder</h2>
+                        <p data-i18n="founder.body">Gökhan Dönmez blends architectural design, technical art, and development to connect physical and digital experiences. He leads every engagement personally, ensuring the work stays strategic, precise, and measurable.</p>
+                        <div class="founder__links">
+                            <a href="assets/docs/donmezg_231220_en.pdf" data-i18n="founder.resume">Resume</a>
+                            <a href="https://github.com/Horuspokus" data-i18n="founder.github">GitHub</a>
+                            <a href="https://www.linkedin.com/in/donmezgokhan/" data-i18n="founder.linkedin">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="section section--highlight">
+                <div class="section__content contact">
+                    <div>
+                        <h2 data-i18n="contact.title">Let's build your digital twin</h2>
+                        <p data-i18n="contact.body">Tell us about your project, your timeline, and how you prefer to engage. We are flexible with NDAs and can embed with your design or construction teams.</p>
+                    </div>
+                    <div class="contact__details">
+                        <p data-i18n="contact.emailLabel">Email</p>
+                        <a href="mailto:info@lxir.tech">info@lxir.tech</a>
+                        <p data-i18n="contact.locationLabel">Location</p>
+                        <span data-i18n="contact.locationValue">Istanbul · Remote collaborations worldwide</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__content">
+                <span data-i18n="footer.notice">&copy; 2022&ndash;2024 Gökhan Dönmez — LXIR Technology</span>
+                <a href="#top" data-i18n="footer.backToTop">Back to top</a>
+            </div>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const translations = {
+                    en: {
+                        controls: {
+                            languageLabel: "Language",
+                            toLight: "Switch to light theme",
+                            toDark: "Switch to dark theme",
+                            studioLabel: "Spatial Technology Company",
+                            status: "Open for collaborations",
+                            contactEmail: "info@lxir.tech"
+                        },
+                        hero: {
+                            eyebrow: "Spatial Technology Company",
+                            title: "Products and pipelines for believable XR twins.",
+                            lead: "LXIR Technology engineers the toolchains that make immersive content repeatable—from BIM ingestion to real-time delivery. We build custom software, optimize data, and produce experiences that scale.",
+                            primaryCta: "Schedule an introduction",
+                            secondaryCta: "Download resume",
+                            nav: {
+                                about: "About",
+                                solutions: "Solutions",
+                                founder: "Founder",
+                                contact: "Contact"
+                            }
+                        },
+                        about: {
+                            title: "About Us",
+                            body: "Since 2023, LXIR Technology has been building proprietary frameworks that connect CAD/BIM sources to XR viewers, accelerating the path from raw data to believable twins. We blend software development with technical art to make immersive experiences reproducible.",
+                            metrics: {
+                                xr: { value: "XR", label: "interoperable from day one" },
+                                tours: { value: "360°", label: "narrative tours" },
+                                realtime: { value: "Real-time", label: "design reviews" }
+                            }
+                        },
+                        solutions: {
+                            title: "Solutions",
+                            intro: "Our products cover pipeline automation, immersive storytelling platforms, and visualization systems that deliver measurable outcomes.",
+                            cards: [
+                                {
+                                    title: "XR-ready BIM Systems",
+                                    body: "Automation scripts and validators that convert BIM/CAD inputs into performant XR assets without sacrificing metadata fidelity."
+                                },
+                                {
+                                    title: "360° Interaction Platforms",
+                                    body: "Custom tour engines with analytics, branching narratives, and CMS hooks so stakeholders experience every decision within context."
+                                },
+                                {
+                                    title: "Photoreal Visualization Suite",
+                                    body: "Real-time render pipelines fed directly from the same source of truth, ensuring stills and motion match what ships in XR."
+                                }
+                            ]
+                        },
+                        founder: {
+                            title: "About the Founder",
+                            body: "Gökhan Dönmez blends architectural design, technical art, and development to connect physical and digital experiences. He leads every engagement personally, ensuring the work stays strategic, precise, and measurable.",
+                            resume: "Resume",
+                            github: "GitHub",
+                            linkedin: "LinkedIn"
+                        },
+                        contact: {
+                            title: "Let's build your digital twin",
+                            body: "Tell us about your project, your timeline, and how you prefer to engage. We are flexible with NDAs and can embed with your design or construction teams.",
+                            emailLabel: "Email",
+                            locationLabel: "Location",
+                            locationValue: "Istanbul · Remote collaborations worldwide"
+                        },
+                        footer: {
+                            notice: "© 2022–2024 Gökhan Dönmez — LXIR Technology",
+                            backToTop: "Back to top"
+                        }
+                    },
+                    fr: {
+                        controls: {
+                            languageLabel: "Langue",
+                            toLight: "Passer au thème clair",
+                            toDark: "Passer au thème sombre",
+                            studioLabel: "Entreprise technologique spatiale",
+                            status: "Ouvert aux collaborations",
+                            contactEmail: "info@lxir.tech"
+                        },
+                        hero: {
+                            eyebrow: "Entreprise technologique spatiale",
+                            title: "Produits et pipelines pour des jumeaux XR crédibles.",
+                            lead: "LXIR Technology conçoit les chaînes d'outils qui rendent la création immersive reproductible — de l'ingestion BIM à la diffusion temps réel. Nous développons des logiciels sur mesure, optimisons les données et produisons des expériences qui passent à l'échelle.",
+                            primaryCta: "Planifier une introduction",
+                            secondaryCta: "Télécharger le CV",
+                            nav: {
+                                about: "À propos",
+                                solutions: "Solutions",
+                                founder: "Fondateur",
+                                contact: "Contact"
+                            }
+                        },
+                        about: {
+                            title: "À propos",
+                            body: "Depuis 2023, LXIR Technology construit des frameworks propriétaires qui relient les sources CAD/BIM aux visionneuses XR, accélérant le passage des données brutes à des jumeaux convaincants. Nous mélangeons développement logiciel et art technique pour rendre les expériences immersives reproductibles.",
+                            metrics: {
+                                xr: { value: "XR", label: "interopérable dès le premier jour" },
+                                tours: { value: "360°", label: "visites narratives" },
+                                realtime: { value: "Temps réel", label: "revues de conception" }
+                            }
+                        },
+                        solutions: {
+                            title: "Solutions",
+                            intro: "Nos produits couvrent l'automatisation des pipelines, les plateformes narratives immersives et les systèmes de visualisation livrés avec des résultats mesurables.",
+                            cards: [
+                                {
+                                    title: "Systèmes BIM prêts pour la XR",
+                                    body: "Scripts d'automatisation et validateurs qui convertissent les entrées BIM/CAO en assets XR performants sans sacrifier les métadonnées."
+                                },
+                                {
+                                    title: "Plateformes d'interaction 360°",
+                                    body: "Moteurs de visite sur mesure avec analytics, scénarios ramifiés et intégrations CMS pour contextualiser chaque décision."
+                                },
+                                {
+                                    title: "Suite de visualisation photoréaliste",
+                                    body: "Pipelines de rendu temps réel alimentés par une source unique garantissant que les images fixes et animées reflètent la version XR."
+                                }
+                            ]
+                        },
+                        founder: {
+                            title: "À propos du fondateur",
+                            body: "Gökhan Dönmez combine conception architecturale, art technique et développement pour relier expériences physiques et numériques. Il pilote personnellement chaque mission afin de garantir une approche stratégique, précise et mesurable.",
+                            resume: "CV",
+                            github: "GitHub",
+                            linkedin: "LinkedIn"
+                        },
+                        contact: {
+                            title: "Créons votre jumeau numérique",
+                            body: "Parlez-nous de votre projet, de vos délais et de votre mode de collaboration. Nous travaillons sous NDA et pouvons intégrer vos équipes de conception ou de construction.",
+                            emailLabel: "E-mail",
+                            locationLabel: "Localisation",
+                            locationValue: "Istanbul · Collaborations à distance dans le monde entier"
+                        },
+                        footer: {
+                            notice: "© 2022–2024 Gökhan Dönmez — LXIR Technology",
+                            backToTop: "Retour en haut"
+                        }
+                    },
+                    de: {
+                        controls: {
+                            languageLabel: "Sprache",
+                            toLight: "Zum hellen Design wechseln",
+                            toDark: "Zum dunklen Design wechseln",
+                            studioLabel: "Spatial-Technology-Unternehmen",
+                            status: "Offen für Kooperationen",
+                            contactEmail: "info@lxir.tech"
+                        },
+                        hero: {
+                            eyebrow: "Spatial-Technology-Unternehmen",
+                            title: "Produkte und Pipelines für glaubwürdige XR-Zwillinge.",
+                            lead: "LXIR Technology entwickelt Toolchains, die immersive Inhalte reproduzierbar machen – von der BIM-Übernahme bis zur Echtzeit-Auslieferung. Wir bauen individuelle Software, optimieren Daten und liefern Erlebnisse, die skalieren.",
+                            primaryCta: "Intro-Gespräch vereinbaren",
+                            secondaryCta: "Lebenslauf herunterladen",
+                            nav: {
+                                about: "Über uns",
+                                solutions: "Leistungen",
+                                founder: "Gründer",
+                                contact: "Kontakt"
+                            }
+                        },
+                        about: {
+                            title: "Über uns",
+                            body: "Seit 2023 baut LXIR Technology proprietäre Frameworks, die CAD/BIM-Quellen mit XR-Viewern verbinden und den Weg von Rohdaten zu überzeugenden Zwillingen verkürzen. Wir kombinieren Softwareentwicklung mit Technical Art, um immersive Erlebnisse reproduzierbar zu machen.",
+                            metrics: {
+                                xr: { value: "XR", label: "ab Tag eins kompatibel" },
+                                tours: { value: "360°", label: "narrative Touren" },
+                                realtime: { value: "Echtzeit", label: "Design-Reviews" }
+                            }
+                        },
+                        solutions: {
+                            title: "Leistungen",
+                            intro: "Unsere Produkte decken Pipeline-Automatisierung, immersive Storytelling-Plattformen und Visualisierungssysteme mit messbaren Ergebnissen ab.",
+                            cards: [
+                                {
+                                    title: "XR-fähige BIM-Systeme",
+                                    body: "Automatisierungsskripte und Validatoren, die BIM/CAD-Eingaben in performante XR-Assets verwandeln, ohne Metadaten zu verlieren."
+                                },
+                                {
+                                    title: "360°-Interaktionsplattformen",
+                                    body: "Individuelle Tour-Engines mit Analytics, verzweigten Narrativen und CMS-Anbindung, damit Entscheidungen stets im Kontext erlebt werden."
+                                },
+                                {
+                                    title: "Photorealistische Visualisierungssuite",
+                                    body: "Echtzeit-Renderpipelines aus derselben Datenquelle stellen sicher, dass Stills und Animationen der XR-Auslieferung entsprechen."
+                                }
+                            ]
+                        },
+                        founder: {
+                            title: "Über den Gründer",
+                            body: "Gökhan Dönmez vereint Architekturdesign, Technical Art und Entwicklung, um physische und digitale Erlebnisse zu verknüpfen. Er begleitet jedes Projekt persönlich, damit die Arbeit strategisch, präzise und messbar bleibt.",
+                            resume: "Lebenslauf",
+                            github: "GitHub",
+                            linkedin: "LinkedIn"
+                        },
+                        contact: {
+                            title: "Lassen Sie uns Ihren digitalen Zwilling bauen",
+                            body: "Erzählen Sie uns von Ihrem Projekt, Ihrem Zeitplan und Ihren bevorzugten Abläufen. Wir arbeiten flexibel mit NDAs und können uns in Ihre Planungs- oder Baustellenteams integrieren.",
+                            emailLabel: "E-Mail",
+                            locationLabel: "Standort",
+                            locationValue: "Istanbul · Remote-Zusammenarbeit weltweit"
+                        },
+                        footer: {
+                            notice: "© 2022–2024 Gökhan Dönmez — LXIR Technology",
+                            backToTop: "Nach oben"
+                        }
+                    },
+                    tr: {
+                        controls: {
+                            languageLabel: "Dil",
+                            toLight: "Açık temaya geç",
+                            toDark: "Koyu temaya geç",
+                            studioLabel: "Uzamsal teknoloji şirketi",
+                            status: "İş birliklerine açığız",
+                            contactEmail: "info@lxir.tech"
+                        },
+                        hero: {
+                            eyebrow: "Uzamsal teknoloji şirketi",
+                            title: "İnandırıcı XR ikizleri için ürünler ve pipeline'lar.",
+                            lead: "LXIR Technology, BIM alımından gerçek zamanlı dağıtıma kadar sürükleyici içeriği tekrar üretilebilir kılan araç zincirleri geliştirir. Özel yazılımlar yazar, veriyi optimize eder ve ölçeklenebilir deneyimler üretiriz.",
+                            primaryCta: "Tanışma planla",
+                            secondaryCta: "Özgeçmişi indir",
+                            nav: {
+                                about: "Hakkımızda",
+                                solutions: "Çözümler",
+                                founder: "Kurucu",
+                                contact: "İletişim"
+                            }
+                        },
+                        about: {
+                            title: "Hakkımızda",
+                            body: "2023'ten beri LXIR Technology, CAD/BIM kaynaklarını XR görüntüleyicilere bağlayan özel framework'ler kurarak ham veriden inandırıcı ikizlere giden yolu hızlandırıyor. Yazılım geliştirmeyi teknik sanatla harmanlayıp her deneyimi tekrar üretilebilir kılıyoruz.",
+                            metrics: {
+                                xr: { value: "XR", label: "ilk günden uyumlu" },
+                                tours: { value: "360°", label: "anlatı turları" },
+                                realtime: { value: "Gerçek zamanlı", label: "tasarım incelemeleri" }
+                            }
+                        },
+                        solutions: {
+                            title: "Çözümler",
+                            intro: "Ürünlerimiz pipeline otomasyonunu, sürükleyici hikâye platformlarını ve ölçülebilir çıktılar sunan görselleştirme sistemlerini kapsar.",
+                            cards: [
+                                {
+                                    title: "XR uyumlu BIM sistemleri",
+                                    body: "BIM/CAD girdilerini metaveriyi kaybetmeden performanslı XR varlıklarına dönüştüren otomasyon scriptleri ve doğrulayıcılar."
+                                },
+                                {
+                                    title: "360° etkileşim platformları",
+                                    body: "Analitik, dallanan anlatılar ve CMS entegrasyonları barındıran özel tur motorları; herkes kararları bağlamıyla deneyimler."
+                                },
+                                {
+                                    title: "Fotogerçek görselleştirme paketi",
+                                    body: "XR teslimatıyla aynı veri kaynağından beslenen gerçek zamanlı render pipeline'ları; kareler ve animasyonlar tutarlı kalır."
+                                }
+                            ]
+                        },
+                        founder: {
+                            title: "Kurucu hakkında",
+                            body: "Gökhan Dönmez, fiziksel ve dijital deneyimleri buluşturmak için mimari tasarım, teknik sanat ve yazılım geliştirmeyi harmanlar. Her projeye bizzat liderlik ederek çalışmanın stratejik, isabetli ve ölçülebilir kalmasını sağlar.",
+                            resume: "Özgeçmiş",
+                            github: "GitHub",
+                            linkedin: "LinkedIn"
+                        },
+                        contact: {
+                            title: "Dijital ikizinizi oluşturalım",
+                            body: "Projenizi, takviminizi ve nasıl çalışmayı tercih ettiğinizi anlatın. NDA süreçlerine uyum sağlarız ve tasarım ya da şantiye ekiplerinize entegre olabiliriz.",
+                            emailLabel: "E-posta",
+                            locationLabel: "Konum",
+                            locationValue: "İstanbul · Dünya çapında uzaktan iş birlikleri"
+                        },
+                        footer: {
+                            notice: "© 2022–2024 Gökhan Dönmez — LXIR Technology",
+                            backToTop: "Başa dön"
+                        }
+                    },
+                    ar: {
+                        controls: {
+                            languageLabel: "اللغة",
+                            toLight: "التبديل إلى النسق الفاتح",
+                            toDark: "التبديل إلى النسق الداكن",
+                            studioLabel: "شركة تكنولوجيا مكانية",
+                            status: "متاح للتعاون",
+                            contactEmail: "info@lxir.tech"
+                        },
+                        hero: {
+                            eyebrow: "شركة تكنولوجيا مكانية",
+                            title: "منتجات ومسارات عمل لتوائم XR موثوقة.",
+                            lead: "تعكف LXIR Technology على هندسة سلاسل الأدوات التي تجعل المحتوى الغامر قابلاً للتكرار — من استيعاب بيانات BIM إلى التوزيع الفوري. نبني برمجيات مخصصة، نحسّن البيانات، وننتج تجارب قابلة للتوسع.",
+                            primaryCta: "حدّد جلسة تعارف",
+                            secondaryCta: "تحميل السيرة الذاتية",
+                            nav: {
+                                about: "من نحن",
+                                solutions: "الحلول",
+                                founder: "المؤسس",
+                                contact: "تواصل"
+                            }
+                        },
+                        about: {
+                            title: "من نحن",
+                            body: "منذ 2023 تبني LXIR Technology أُطرها الخاصة التي تربط مصادر CAD/BIM بمشغلات XR، ما يسرّع الانتقال من البيانات الخام إلى توائم مقنعة. نمزج تطوير البرمجيات بالفن التقني لجعل التجارب الغامرة قابلة لإعادة الإنتاج.",
+                            metrics: {
+                                xr: { value: "XR", label: "جاهزة للعمل منذ اليوم الأول" },
+                                tours: { value: "٣٦٠°", label: "جولات قصصية" },
+                                realtime: { value: "آني", label: "مراجعات التصميم" }
+                            }
+                        },
+                        solutions: {
+                            title: "الحلول",
+                            intro: "تشمل منتجاتنا أتمتة خطوط الأنابيب، منصات سرد غامر، وأنظمة تصور تقدّم نتائج قابلة للقياس.",
+                            cards: [
+                                {
+                                    title: "أنظمة BIM جاهزة للواقع الممتد",
+                                    body: "برمجيات أتمتة وأدوات تحقق تحول مدخلات BIM/CAD إلى أصول XR عالية الأداء دون فقدان البيانات الوصفية."
+                                },
+                                {
+                                    title: "منصات تفاعل بزاوية ٣٦٠°",
+                                    body: "محركات جولات مخصصة مزودة بالتحليلات، السرد المتشعب، وتكاملات CMS ليعيش أصحاب المصلحة كل قرار ضمن سياقه."
+                                },
+                                {
+                                    title: "جناح التصورات الفوتوغرافية الواقعية",
+                                    body: "خطوط عرض آنية تستمد تغذيتها من نفس مصدر الحقيقة لضمان تطابق الصور الثابتة والمرئية مع ما يُسلَّم في XR."
+                                }
+                            ]
+                        },
+                        founder: {
+                            title: "عن المؤسس",
+                            body: "يجمع جوكهان دونمز بين التصميم المعماري والفن التقني والتطوير ليربط بين التجارب المادية والرقمية. يقود كل تعاون بنفسه لضمان بقاء العمل استراتيجياً ودقيقاً وقابلاً للقياس.",
+                            resume: "السيرة الذاتية",
+                            github: "GitHub",
+                            linkedin: "LinkedIn"
+                        },
+                        contact: {
+                            title: "لنصنع توأمك الرقمي",
+                            body: "أخبرنا عن مشروعك وجدولك الزمني وطريقة العمل التي تفضّلها. يمكننا العمل وفق اتفاقيات السرية والانضمام إلى فرق التصميم أو البناء لديك.",
+                            emailLabel: "البريد الإلكتروني",
+                            locationLabel: "الموقع",
+                            locationValue: "إسطنبول · تعاون عن بُعد حول العالم"
+                        },
+                        footer: {
+                            notice: "© 2022–2024 جوكهان دونمز — تقنية LXIR",
+                            backToTop: "العودة إلى الأعلى"
+                        }
+                    }
+                };
+                const defaultLanguage = "en";
+                const htmlElement = document.documentElement;
+                const translationElements = document.querySelectorAll("[data-i18n]");
+                const languageSwitchContainer = document.getElementById("language-switch");
+                const themeToggle = document.getElementById("theme-toggle");
+                const heroLogo = document.querySelector(".hero__logo");
+                const dotNavDots = document.querySelectorAll(".dot-nav__dot");
+                const languageStorageKey = "lxir-language";
+                const themeStorageKey = "lxir-theme";
+                let currentLanguage = defaultLanguage;
+                const storedLanguage = localStorage.getItem(languageStorageKey);
+                if (storedLanguage && translations[storedLanguage]) {
+                    currentLanguage = storedLanguage;
+                }
+                const storedTheme = localStorage.getItem(themeStorageKey);
+                const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+                const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
+                applyLanguage(currentLanguage);
+                applyTheme(initialTheme);
+                buildLanguageSwitch(currentLanguage);
+                observeSections();
+                bindDotNavClicks();
+                if (themeToggle) {
+                    themeToggle.addEventListener("click", function () {
+                        const nextTheme = htmlElement.dataset.theme === "dark" ? "light" : "dark";
+                        applyTheme(nextTheme);
+                        localStorage.setItem(themeStorageKey, nextTheme);
+                    });
+                }
+                function applyLanguage(language) {
+                    const dictionary = translations[language] || translations[defaultLanguage];
+                    translationElements.forEach(function (element) {
+                        const key = element.getAttribute("data-i18n");
+                        const attrTarget = element.getAttribute("data-i18n-attr");
+                        const translatedText = getValue(dictionary, key) || getValue(translations[defaultLanguage], key);
+                        if (!translatedText) {
+                            return;
+                        }
+                        if (attrTarget) {
+                            element.setAttribute(attrTarget, translatedText);
+                        } else {
+                            element.textContent = translatedText;
+                        }
+                    });
+                    htmlElement.lang = language;
+                    htmlElement.dir = language === "ar" ? "rtl" : "ltr";
+                    currentLanguage = language;
+                    highlightLanguage(language);
+                    updateThemeLabel();
+                }
+                function buildLanguageSwitch(initialLanguage) {
+                    if (!languageSwitchContainer) {
+                        return;
+                    }
+                    const fragment = document.createDocumentFragment();
+                    Object.keys(translations).forEach(function (lang) {
+                        const btn = document.createElement("button");
+                        btn.type = "button";
+                        btn.className = "language-switch__btn";
+                        btn.textContent = lang.toUpperCase();
+                        btn.dataset.lang = lang;
+                        if (lang === initialLanguage) {
+                            btn.classList.add("is-active");
+                        }
+                        btn.addEventListener("click", function () {
+                            if (lang === currentLanguage) {
+                                return;
+                            }
+                            applyLanguage(lang);
+                            localStorage.setItem(languageStorageKey, lang);
+                        });
+                        fragment.appendChild(btn);
+                    });
+                    languageSwitchContainer.innerHTML = "";
+                    languageSwitchContainer.appendChild(fragment);
+                }
+                function highlightLanguage(lang) {
+                    if (!languageSwitchContainer) {
+                        return;
+                    }
+                    const buttons = languageSwitchContainer.querySelectorAll(".language-switch__btn");
+                    buttons.forEach(function (btn) {
+                        btn.classList.toggle("is-active", btn.dataset.lang === lang);
+                    });
+                }
+                function observeSections() {
+                    if (!("IntersectionObserver" in window) || dotNavDots.length === 0) {
+                        return;
+                    }
+                    const sectionIds = ["top", "about", "solutions", "founder", "contact"];
+                    const observer = new IntersectionObserver(
+                        function (entries) {
+                            const visibleEntries = entries.filter(function (entry) {
+                                return entry.isIntersecting;
+                            });
+                            if (visibleEntries.length === 0) {
+                                return;
+                            }
+                            const dominant = visibleEntries.reduce(function (prev, current) {
+                                return current.intersectionRatio > prev.intersectionRatio ? current : prev;
+                            });
+                            if (dominant && dominant.target) {
+                                setActiveDot(dominant.target.id);
+                            }
+                        },
+                        { rootMargin: "-35% 0px -35% 0px", threshold: [0, 0.35, 0.55, 0.75, 1] }
+                    );
+                    sectionIds.forEach(function (id) {
+                        const element = document.getElementById(id);
+                        if (element) {
+                            observer.observe(element);
+                        }
+                    });
+                }
+                function bindDotNavClicks() {
+                    if (dotNavDots.length === 0) {
+                        return;
+                    }
+                    dotNavDots.forEach(function (dot) {
+                        dot.addEventListener("click", function () {
+                            const section = dot.dataset.section;
+                            if (section) {
+                                setActiveDot(section);
+                            }
+                        });
+                    });
+                }
+                function setActiveDot(sectionId) {
+                    dotNavDots.forEach(function (dot) {
+                        dot.classList.toggle("is-active", dot.dataset.section === sectionId);
+                    });
+                }
+                function applyTheme(theme) {
+                    htmlElement.dataset.theme = theme;
+                    if (themeToggle) {
+                        themeToggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+                    }
+                    updateLogo(theme);
+                    updateThemeLabel();
+                }
+                function updateLogo(theme) {
+                    if (!heroLogo) {
+                        return;
+                    }
+                    const attr = theme === "dark" ? "data-logo-dark" : "data-logo-light";
+                    const fallbackAttr = theme === "dark" ? "data-logo-light" : "data-logo-dark";
+                    const desiredSrc = heroLogo.getAttribute(attr) || heroLogo.getAttribute(fallbackAttr) || heroLogo.getAttribute("src");
+                    if (desiredSrc) {
+                        heroLogo.setAttribute("src", desiredSrc);
+                    }
+                }
+                function updateThemeLabel() {
+                    if (!themeToggle) {
+                        return;
+                    }
+                    const theme = htmlElement.dataset.theme || "dark";
+                    const labelKey = theme === "dark" ? "controls.toLight" : "controls.toDark";
+                    const dictionary = translations[currentLanguage] || translations[defaultLanguage];
+                    const label = getValue(dictionary, labelKey) || getValue(translations[defaultLanguage], labelKey);
+                    if (label) {
+                        themeToggle.setAttribute("aria-label", label);
+                    }
+                }
+                function getValue(scope, path) {
+                    return path.split(".").reduce(function (acc, part) {
+                        if (acc && typeof acc === "object" && part in acc) {
+                            return acc[part];
+                        }
+                        return undefined;
+                    }, scope);
+                }
+            });
+        </script>
     </body>
-    <footer>
-        <hr>
-        <code>Copyright (c) 2022-2024 Gökhan Dönmez</code>
-    </footer>
 </html>
